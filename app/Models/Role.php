@@ -19,4 +19,14 @@ class Role extends Model
     {
         return $this->hasMany(User::class);
     }
+
+    public static function getUserRoleId(): int
+    {
+        return Role::where('key', 'user')->first()->id;
+    }
+
+    public static function getAdminRoleId(): int
+    {
+        return Role::where('key', 'admin')->first()->id;
+    }
 }

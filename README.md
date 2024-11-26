@@ -35,3 +35,18 @@ If u need a DB, in the repo already exists a docker compose file to run a mariad
 ### Running the migrations fresh
 
 `php artisan migrate:fresh`
+
+
+
+## NOTAS AL PASO 
+
+- En el composer agrege al autoload  un archivo de utilidades, esto es algo que hago para principalmente no tener que re escribir cosas tediosas, y principalmente, para evitar errores falsos de intelephense 
+
+- El sistema de respuestas esta echo para manejar colleciones , items y respuestas de manera estandarizada.
+
+- Como patrones de diseño, principalmente, uso lo que propone laravel, y me baso mucho en el principio tell don't ask.
+
+- Decidi no usar repositorios, yo entiendo a eloquent como un repositorio, a parte de ORM.
+
+- Tema testing, decidi solamente testear flujos completos (mas tipo feature que unit) , mas que nada para demostrar conocimiento, por que si le daba cobertura individual a servicios, controladores y utilidades, se me iba de tiempo.
+
