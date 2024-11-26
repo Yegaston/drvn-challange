@@ -9,6 +9,7 @@ use App\Traits\Shared\HttpLaravelResponse;
 use App\Traits\Shared\HttpMeta;
 use App\Traits\Shared\HttpResource;
 use App\Traits\Shared\HttpResponse;
+use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class BaseController
@@ -26,4 +27,14 @@ abstract class BaseController extends Controller
      * @return void
      */
     public function __construct() {}
+
+
+    protected function isOwner(int $userId, Model $model): bool
+    {
+        if ($userId === $model->created_by) {
+            return true;
+        }
+
+        return $this->respondWithError('You are not authorized to perform this action');
+    }
 }

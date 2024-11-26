@@ -17,6 +17,9 @@ class PostService
             $data['slug'] = $data['slug'] . '-' . Str::random(5);
         }
 
+        // Sanitize the body to prevent XSS attacks
+        $data['body'] = strip_tags($data['body']);
+
         return Post::create($data);
     }
 

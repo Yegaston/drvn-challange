@@ -4,14 +4,14 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdatePostCommentRequest extends FormRequest
+class UpdatePostCommentRequest extends BaseFormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,7 @@ class UpdatePostCommentRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'text' => 'required|string|max:255',
         ];
     }
 }

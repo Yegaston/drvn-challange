@@ -51,6 +51,8 @@ class PostController extends BaseController
      */
     public function update(UpdatePostRequest $request, Post $post)
     {
+        $this->isOwner(current_user()->id, $post);
+
         $res = $this->postService->update($post, $request->validated());
         return $this->respondWithItem($res, PostResource::class);
     }
@@ -60,6 +62,8 @@ class PostController extends BaseController
      */
     public function destroy(Post $post)
     {
+        $this->isOwner(current_user()->id, $post);
+
         if ($this->postService->delete($post)) {
             return $this->respondWithSuccess('Post deleted successfully');
         }

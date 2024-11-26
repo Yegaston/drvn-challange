@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostCommentController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserAuthController;
 use App\Http\Middlewares\CheckUserRoleMiddleware;
@@ -28,5 +29,11 @@ Route::prefix('v1')->group(function () {
         ->middleware(CheckUserRoleMiddleware::class . ':admin');
 
     Route::apiResource('/posts', PostController::class)
+        ->middleware('auth:sanctum');
+
+    Route::apiResource('/post-comments', PostCommentController::class)
+        ->middleware('auth:sanctum');
+
+    Route::get('/post-comments/post/{postId}', [PostCommentController::class, 'getByPostId'])
         ->middleware('auth:sanctum');
 });

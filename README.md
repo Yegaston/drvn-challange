@@ -60,3 +60,5 @@ If u need a DB, in the repo already exists a docker compose file to run a mariad
 
 - En la respuesta generales hay una parte Meta que no tiene uso, mas adelante si sumara spatie ahi iria todo lo q se permite filtrar etc etc
 
+- El response de Posts quedo medio grande agregando por defecto los comentarios, se deberia implementar un lazy load, o implementar spatie query builder para cargarlo explicitamente. (Por tiempo no lo hice)
+
