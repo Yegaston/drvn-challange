@@ -46,7 +46,17 @@ If u need a DB, in the repo already exists a docker compose file to run a mariad
 
 - Como patrones de diseño, principalmente, uso lo que propone laravel, y me baso mucho en el principio tell don't ask.
 
-- Decidi no usar repositorios, yo entiendo a eloquent como un repositorio, a parte de ORM.
+- Decidi no usar repositorios, yo entiendo a eloquent como un repositorio, a parte de ser un ORM.
 
 - Tema testing, decidi solamente testear flujos completos (mas tipo feature que unit) , mas que nada para demostrar conocimiento, por que si le daba cobertura individual a servicios, controladores y utilidades, se me iba de tiempo.
+
+- En .github hay una pipe de Github Actions que corre los tests de pest (Poquito de infra para cubrir ese apartado por mas que no estuviera pedido)
+
+- .env.ci es para githun actions
+
+- Tambien docker compose para levantar la base de datos, laravel en si no dockerize ya que en local desarrollo con herd y no me hacia falta esa parte de entorno.
+
+- Casi llegando a terminar el challange me di cuenta que el nombre del Post y PostComment no eran los mas adecuados, deberia haber sido Article y ArticleComment 😅
+
+- En la respuesta generales hay una parte Meta que no tiene uso, mas adelante si sumara spatie ahi iria todo lo q se permite filtrar etc etc
 

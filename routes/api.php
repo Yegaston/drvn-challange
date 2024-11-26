@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserAuthController;
-use App\Http\Middleware\CheckUserRoleMiddleware;
+use App\Http\Middlewares\CheckUserRoleMiddleware;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,4 +26,7 @@ Route::prefix('v1')->group(function () {
     Route::post('/change-role/{user}', [UserAuthController::class, 'changeUserRole'])
         ->middleware('auth:sanctum')
         ->middleware(CheckUserRoleMiddleware::class . ':admin');
+
+    Route::apiResource('/posts', PostController::class)
+        ->middleware('auth:sanctum');
 });

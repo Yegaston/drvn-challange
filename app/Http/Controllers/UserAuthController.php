@@ -51,7 +51,7 @@ class UserAuthController extends BaseController
 
     public function changeUserRole(User $user, ChangeUserRoleRequest $request)
     {
-        $this->userAuthService->changeUserRole($user, $request->role);
+        $user = $this->userAuthService->changeUserRole($user, $request->role);
         return $this->respondWithItem($user, UserAuthResource::class);
     }
 }

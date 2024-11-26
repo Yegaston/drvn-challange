@@ -67,7 +67,6 @@ trait HttpMeta
         }
 
         return
-            $resource instanceof \App\Models\Shared\BaseModel ||
             $resource instanceof \Illuminate\Http\Resources\Json\JsonResource ?
             $this->arrPluck($resource->$property, $key) : [];
     }
