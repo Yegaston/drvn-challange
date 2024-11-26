@@ -17,7 +17,9 @@ class PostCommentFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'post_id' => 1,
+            'text' => fake()->paragraph(),
+            'created_by' => 1,
         ];
     }
 }
