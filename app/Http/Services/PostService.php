@@ -12,15 +12,17 @@ class PostService
         $data['created_by'] = current_user()->id;
         $data['slug'] = Str::slug($data['title']);
 
+        $query = Post::query();
+
         // Check if the slug is already taken and hadle it
-        if (Post::where('slug', $data['slug'])->exists()) {
+        if ($query->where('slug', $data['slug'])->exists()) {
             $data['slug'] = $data['slug'] . '-' . Str::random(5);
         }
 
         // Sanitize the body to prevent XSS attacks
         $data['body'] = strip_tags($data['body']);
 
-        return Post::create($data);
+        return $query->create($data);
     }
 
     public function getAll(int $page = 1, int $perPage = 10)
