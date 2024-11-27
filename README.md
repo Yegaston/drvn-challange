@@ -52,7 +52,7 @@ If u need a DB, in the repo already exists a docker compose file to run a mariad
 
 - En .github hay una pipe de Github Actions que corre los tests de pest (Poquito de infra para cubrir ese apartado por mas que no estuviera pedido)
 
-- .env.ci es para githun actions
+- .env.ci es para github actions
 
 - Tambien docker compose para levantar la base de datos, laravel en si no dockerize ya que en local desarrollo con herd y no me hacia falta esa parte de entorno.
 
