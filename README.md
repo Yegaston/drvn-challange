@@ -37,6 +37,8 @@ If u need a DB, in the repo already exists a docker compose file to run a mariad
 `php artisan migrate:fresh`
 
 
+## postman-collection contiene la coleccion de postman con los edpoints (y ejemplos de los bodys
+
 
 ## NOTAS AL PASO 
 

@@ -1,0 +1,435 @@
+{
+	"info": {
+		"_postman_id": "89278088-b96f-4548-b47b-6aab490f86f4",
+		"name": "VERSION 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36638205"
+	},
+	"item": [
+		{
+			"name": "{{url}}health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}health",
+					"host": [
+						"{{url}}health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@example.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}login",
+					"host": [
+						"{{url}}login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@example.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}login",
+					"host": [
+						"{{url}}login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@example.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}login",
+					"host": [
+						"{{url}}login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@example.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}logout",
+					"host": [
+						"{{url}}logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change user role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@example.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}logout",
+					"host": [
+						"{{url}}logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}posts?per_page=5&page=1",
+					"host": [
+						"{{url}}posts"
+					],
+					"query": [
+						{
+							"key": "per_page",
+							"value": "5"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get one post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}posts/3",
+					"host": [
+						"{{url}}posts"
+					],
+					"path": [
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete one post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}posts/5",
+					"host": [
+						"{{url}}posts"
+					],
+					"path": [
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create one post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Nuevo post\",\n    \"body\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt ligula sed ligula ornare, non pretium nisi molestie. Aliquam est felis, efficitur ac felis at, vehicula bibendum felis. In nulla nibh, faucibus id commodo nec, condimentum sed enim. Morbi aliquam posuere orci vitae tempor.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}posts",
+					"host": [
+						"{{url}}posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update one post",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Nuevo post\",\n    \"body\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt ligula sed ligula ornare, non pretium nisi molestie. Aliquam est felis, efficitur ac felis at, vehicula bibendum felis. In nulla nibh, faucibus id commodo nec, condimentum sed enim. Morbi aliquam posuere orci vitae tempor.\",\n    \"slug\": \"nuevo-post-LxnaP\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}posts/14",
+					"host": [
+						"{{url}}posts"
+					],
+					"path": [
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create comment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Buenardo\",\n    \"post_id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}post-comments",
+					"host": [
+						"{{url}}post-comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get comments by post id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Buenardo\",\n    \"post_id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}post-comments/post/2",
+					"host": [
+						"{{url}}post-comments"
+					],
+					"path": [
+						"post",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all comments",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Buenardo\",\n    \"post_id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}post-comments",
+					"host": [
+						"{{url}}post-comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get one comment",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Buenardo\",\n    \"post_id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}post-comments",
+					"host": [
+						"{{url}}post-comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update one comment",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Buenardo\",\n    \"post_id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}post-comments/4",
+					"host": [
+						"{{url}}post-comments"
+					],
+					"path": [
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove one comment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Buenardo\",\n    \"post_id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}post-comments/3",
+					"host": [
+						"{{url}}post-comments"
+					],
+					"path": [
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
