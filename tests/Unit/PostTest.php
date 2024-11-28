@@ -12,7 +12,6 @@ use Tests\TestCase;
 
 class PostTest extends TestCase
 {
-    use RefreshDatabase;
 
     protected User $user;
 

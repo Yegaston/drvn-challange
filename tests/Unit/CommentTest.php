@@ -12,7 +12,6 @@ use Tests\TestCase;
 
 class CommentTest extends TestCase
 {
-    use RefreshDatabase;
 
     protected User $user;
     protected Post $post;

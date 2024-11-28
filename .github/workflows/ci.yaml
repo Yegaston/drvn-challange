@@ -19,6 +19,7 @@ jobs:
         run: |
           cp .env.ci .env
           touch database/database.sqlite
+          php artisan optimize --env=testing
 
       - name: Run Testsuite
-        run: php artisan test
+        run: php artisan test --env=testing
