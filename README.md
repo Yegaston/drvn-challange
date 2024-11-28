@@ -42,6 +42,8 @@ If u need a DB, in the repo already exists a docker compose file to run a mariad
 
 - En el composer agrege al autoload  un archivo de utilidades, esto es algo que hago para principalmente no tener que re escribir cosas tediosas, y principalmente, para evitar errores falsos de intelephense 
 
+- Le meti una mini pipe de CI en github actions para ver que los tests pasen. 
+
 - El sistema de respuestas esta echo para manejar colleciones , items y respuestas de manera estandarizada.
 
 - Como patrones de diseño, principalmente, uso lo que propone laravel, y me baso mucho en el principio tell don't ask.
